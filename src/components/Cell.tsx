@@ -1,23 +1,30 @@
-import {FC, useState} from "react";
+import {FC} from "react";
 import styled from "styled-components";
 
 const StyledCell = styled.div`
   width: 100%;
   height: 100%;
-  background-color: 'black';
+  background-color: #111111;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
+  color: white;
   font-size: 2em;
   font-weight: bold;
+  border-radius: 5px;
 `
+interface CellProps {
+  id: string;
+  value: string;
+  onClick: () => void;
+}
 
-const Cell : FC = ({value}) => {
+const Cell : FC<CellProps> = (props) => {
 
   return (
     <StyledCell className="cell">
-      <p>{value}</p>
+      <p>{props.value}</p>
     </StyledCell>
   );
 }
