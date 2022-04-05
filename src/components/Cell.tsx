@@ -1,4 +1,4 @@
-import {FC} from "react";
+import { FC } from "react";
 import styled from "styled-components";
 
 const StyledCell = styled.div`
@@ -16,11 +16,10 @@ const StyledCell = styled.div`
 `
 interface CellProps {
   id: string;
-  value: string;
-  onClick: () => void;
+  value: number;
 }
 
-const Cell : FC<CellProps> = (props) => {
+const Cell: FC<CellProps> = (props) => {
 
   return (
     <StyledCell className="cell">
